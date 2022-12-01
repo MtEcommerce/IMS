@@ -1,7 +1,9 @@
+import styled from "../layout.module.scss";
+
 const Header = () => {
   return (
-    <header className="text-3xl font-bold underline">
-      <div>Header Red</div>
+    <header className={styled.header}>
+      <div className="text-2xl">Header Red</div>
     </header>
   );
 };

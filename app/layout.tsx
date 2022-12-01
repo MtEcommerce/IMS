@@ -1,6 +1,10 @@
+"use client";
+
+import { useState } from "react";
 import { Noto_Sans_TC } from "@next/font/google";
 import { Header, SideMenu } from "@components/Layout";
-import "./global.css";
+import styled from "@components/Layout/layout.module.scss";
+import "./global.scss";
 
 const notoSansTC = Noto_Sans_TC({
   weight: "400",
@@ -21,10 +25,12 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body>
-        <Header />
-        <div>
-          <SideMenu />
-          <main>{children}</main>
+        <div className={styled.layout}>
+          <Header />
+          <div className={styled.center}>
+            <SideMenu />
+            <main className={styled.main}>{children}</main>
+          </div>
         </div>
       </body>
     </html>
