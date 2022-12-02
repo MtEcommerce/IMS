@@ -1,3 +1,4 @@
+import { FC, ReactNode } from "react";
 import { Noto_Sans_TC } from "@next/font/google";
 import { Header, Aside } from "@components/Layout";
 import "./global.css";
@@ -7,11 +8,7 @@ const notoSansTC = Noto_Sans_TC({
     subsets: ["chinese-traditional"],
 });
 
-export default function RootLayout({
-    children,
-}: {
-    children: React.ReactNode;
-}) {
+const RootLayout: FC<{ children: ReactNode }> = ({ children }) => {
     return (
         <html lang="zh-TW" className={notoSansTC.className}>
             <head>
@@ -39,4 +36,6 @@ export default function RootLayout({
             </body>
         </html>
     );
-}
+};
+
+export default RootLayout;

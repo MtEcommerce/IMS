@@ -1,4 +1,6 @@
-const Header = () => {
+import { FC } from "react";
+
+const Header: FC = () => {
     return (
         <header className="basis-16 bg-blue-400 px-8 py-2">
             <div className="flex">
