@@ -1,5 +1,5 @@
 import { Noto_Sans_TC } from "@next/font/google";
-import { Header, SideMenu } from "@components/Layout";
+import { Header, Aside } from "@components/Layout";
 import "./global.css";
 
 const notoSansTC = Noto_Sans_TC({
@@ -24,7 +24,7 @@ export default function RootLayout({
         <div className="h-screen flex flex-col">
           <Header />
           <div className="flex grow basis-auto max-h-[calc(100vh-64px)]">
-            <SideMenu />
+            <Aside />
             <main className="h-full overflow-y-scroll grow">{children}</main>
           </div>
         </div>
