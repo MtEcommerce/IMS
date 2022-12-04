@@ -1,9 +1,12 @@
 "use client";
 
-import { useState, FC } from "react";
+import { useState, useEffect, FC } from "react";
+import SideMenuData from "./config/sideMenuData";
+import SideMenu from "../SideMenu";
 
 const Aside: FC = () => {
     const [showAside, setShowAside] = useState(true);
+    const [sideMenuData, setSideMenuData] = useState([]);
 
     return (
         <div className="relative h-full">
@@ -12,7 +15,7 @@ const Aside: FC = () => {
                     !showAside && "w-0 -translate-x-64"
                 }`}
             >
-                <p>Side Menu</p>
+                <SideMenu sideMenuData={sideMenuData} />
             </aside>
             <button
                 className={`absolute left-8 bottom-8 h-14 w-14 rounded-full border-2 ${
